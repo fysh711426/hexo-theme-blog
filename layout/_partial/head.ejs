@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <%
+      var title = page.title;
+      if (is_archive()) {
+        title = 'Archives';
+        if (is_month())
+          title += ': ' + page.year + '/' + page.month;
+        else if (is_year())
+          title += ': ' + page.year;
+      }
+      else if (is_category())
+        title = 'Category: ' + page.category;
+      else if (is_tag())
+        title = 'Tag: ' + page.tag;
+    %>
+    <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="<%- url_for(config.favicon) %>" />
+
+    <!-- link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+
+    <%- css('style.css') %>
+</head>

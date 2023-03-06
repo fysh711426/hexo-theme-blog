@@ -1,0 +1,22 @@
+<div class="header sticky">
+    <div class="header-inner">
+        <a class="logo" href="<%- url_for("/") %>">
+            Blog
+        </a>
+        <div class="nav-menu">
+            <% if (theme.menu) { %>
+                <% theme.menu.forEach(function(value) { %>
+                    <a href="<%- url_for(value.url) %>" class="nav-menu-item">
+                        <%- value.name %>
+                    </a>
+                <%})%>
+            <% } %>
+        </div>
+        <div class="search">
+            <form name="search-form" class="search-form">
+                <input type="text" class="search-input" placeholder="搜尋">
+                <i class="fa-search fa-fw"></i>
+            </form>
+        </div>
+    </div>
+</div>

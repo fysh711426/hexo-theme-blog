@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<%- partial('_partial/head') %>
+<body class="dark">
+    <div class="layout">
+        <%- partial('_partial/header') %>
+        <div class="body">
+            <div class="body-inner">
+                <%- body %>
+            </div>
+        </div>
+        <%- partial('_partial/footer') %>
+    </div>
+    <%- partial('_partial/scripts') %>
+</body>
+</html>

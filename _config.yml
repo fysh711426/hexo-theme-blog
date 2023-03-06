@@ -1,0 +1,28 @@
+# 日期格式 http://momentjs.com/docs/
+date_format: 'YYYY-MM-DD' # 文章發布日期的格式
+
+# 導航選單
+menu:
+  - name: 首頁
+    url: /
+  - name: 分類
+    url: categories/
+  - name: 標籤
+    url: tags/
+
+layout:
+  posts:
+    sidebar: [category]
+  article:
+    sidebar: [category, toc]
+
+# 側邊欄小部件
+sidebar:
+  - widget: category
+    more:
+      url: categories/
+  - widget: toc
+
+# less 渲染
+less:
+  compress: true
